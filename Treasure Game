@@ -1,0 +1,18 @@
+print("Welcome to the treasure island")
+print("You have been choosen to find the treasure")
+
+choice1 = input("You arrived at island.Choose right or left").lower()
+if choice1 == "left":
+    choice2 = input("You arrived at a home.Go IN or STAY").lower()
+    if choice2 == "in":
+        choice3 = input("You escaped from a predator and inside you have found two rooms. Room A or Room B").lower()
+        if choice3 == "A".lower():
+            print("You found the treasure. You won")
+        elif choice3 == "B".lower():
+            print("You were shredded into pieces.You die")
+        else:
+            print("Your chosen path was wrong.You were thrown into fire.You die")
+    else:
+        print("You were eaten by a predator.You die")
+else:
+    print("You were eaten by snakes.You Lose!!!!")
