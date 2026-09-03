@@ -1,0 +1,22 @@
+word = "Hello World!"
+print("The string is :",word)
+
+character = "l"
+print("The character is: ",character)
+
+position = word.count(character)
+print("The frequency for the word is: ",position)
+
+
+mystr = "Count, the number of spaces"
+print("The string is: ",mystr)
+character = " "
+print("The character is: ",character)
+position = mystr.count(character)
+print("The frequency for the word is: ",position)
+print(mystr[0])
+print(mystr[0:2])
+print(mystr[2:6])
+print(word[0:5])
+
+print(word.split())
