@@ -1,0 +1,19 @@
+print("Lists usage in python programming language\n")
+a = ['1','2','3','4','5']
+print(f"This is the list: {a}")
+
+print("This gives out the index value of list",a[3])
+print(a[-2])
+print("index 1 to end of list",a[1:])
+a[1] = "Hello"
+print("Updated list is",a)
+b = ['2','9','6','3',0]
+print(b.index(0))
+print(b.count(0))
+c = [10,2,8,44,77,68,1,67]
+c.sort()
+print(c)
+c.sort(reverse = True)
+print(c)
+
+print("\n These are the basic list manipulation techniques\n")
