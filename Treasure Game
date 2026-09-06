@@ -11,7 +11,7 @@ if choice1 == "left":
         elif choice3 == "B".lower():
             print("You were shredded into pieces.You die")
         else:
-            print("Your chosen path was wrong.You were thrown into fire.You die")
+            print("Your chosen path was wrong.You were thrown into fire.You died!!!")
     else:
         print("You were eaten by a predator.You die")
 else:
