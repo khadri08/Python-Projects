@@ -1,3 +1,4 @@
+#Day - 9
 bids = {}
 def highest_bidder(bidding_dic):
     highest_bid = 0
