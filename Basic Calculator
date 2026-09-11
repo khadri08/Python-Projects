@@ -1,0 +1,39 @@
+def add(a,b):
+  return a+b
+def sub(a,b):
+   return a-b
+def mul(a,b):
+   return a*b
+def div(a,b):
+   return a/b
+
+
+operations = {
+  "+": add,
+  "-": sub,
+  "*": mul,
+  "/": div,
+}
+
+print("Python Calculator\n")
+def calculator():
+  should_accumulate = True
+  a = int(input("What's the first number?: "))
+  while should_accumulate:
+    for symbol in operations:
+      print(symbol)
+    operation_choice = input("Pick an operation ")
+    b = int(input("Whats the second number? "))
+    answer = operations[operation_choice](a,b)
+    print(answer)
+    
+    choice = input(f"Type Type 'y' to continue calculating with {answer}, or type 'n' to start a new calculation: ")
+    
+    if choice == 'y':
+      a = answer
+    else:
+      should_accumulate = False
+      calculator()
+    
+
+calculator() 
