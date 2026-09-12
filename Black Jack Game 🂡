@@ -1,0 +1,46 @@
+import random
+
+def deal_cards():
+  cards = [11,2,3,4,5,6,7,8,9,10,10,10,10]
+  card = random.choice(cards)
+  return card
+
+user_cards = []
+dealer_cards = []
+for _ in range(2):
+    user_cards.append(deal_cards())
+    dealer_cards.append(deal_cards())
+player_wants_cards = True
+while player_wants_cards:
+  print(f"Your card: {user_cards},Current score: {sum(user_cards)}")
+  print(f"Dealer's first hand: {dealer_cards[0]}")
+  
+  ask = input("Type 'y' for another card or 'n' to pass")
+  if ask == 'y':
+    user_cards.append(deal_cards())
+    if sum(user_cards) > 21:
+      player_wants_cards = False
+      print("You're Busted")
+    elif sum(user_cards) == 21:
+      player_wants_cards = False
+  else:
+    player_wants_cards = False
+dealer_wants_cards = True
+while dealer_wants_cards:
+  if sum(dealer_cards) < 17:
+    dealer_cards.append(deal_cards())
+  elif sum(dealer_cards) >= 17:
+    dealer_wants_cards = False
+
+if sum(user_cards) > 21:
+  print("You Lose")
+elif sum(dealer_cards) > 21:
+  print("You Won")
+elif sum(user_cards) == sum(dealer_cards):
+  print("Its a Draw")
+elif sum(user_cards) > sum(dealer_cards):
+    print("You Won")
+else:
+  print("You lose")
+
+    
